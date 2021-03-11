@@ -50,45 +50,30 @@ router.post('/', (req, res) => {
     })
 });
 
-//===== UPDATE USER =====//
-router.put('/:id', (req, res) => {
-    User.update(req.body, {
-        individualHooks: true,
+router.post('/login', (req, res) => {
+    User.findOne({
         where: {
-            id: req.params.id
+            username: req.body.username
         }
     })
     .then(dbUserData => {
-        if(!dbUserData){
-            res.status(404).json({ message: 'No user with that id was found.'});
+        if (!dbUserData) {
+            res.status(400).json({ message: 'username not found!'});
             return;
         }
-        res.json(dbUserData);
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
+        const verfiyPassword = dbUserData.checkPassword(req.body.password);
+        if(!verfiyPassword) {
+            res.status(400).json({ message: 'Incorrect password'});
+            return;
+        }
+        req.session.save(() => {
+            req.session.user_id = dbUserData.id;
+            req.session.username = dbUserData.username;
+            req.session.login = true;
+
+            res.json({ user: dbUserData, message: 'You are now logged in!'});
+        })
     });
 });
 
-
-//===== DELETE USER =====//
-router.delete('/:id', (req, res) => {
-    User.destroy({
-        where: {
-            id: req.params.id
-        }
-    })
-    .then(dbUserData => {
-        if(!dbUserData) {
-            res.status(404).json({ message: 'No user with that id was found.'});
-            return;
-        }
-        res.json(dbUserData);
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    });
-});
 module.exports = router;
