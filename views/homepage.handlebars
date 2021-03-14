@@ -3,14 +3,14 @@
   <li>
     <article class="post">
       <div class="title">
-        <p>{{title}}</p>
-        <span>{{body_text}}</span>
+        <p>{{post.title}}</p>
+        <span>{{post.body_text}}</span>
       </div>
       <div class="meta">
-        {{user.username}} on
-        {{created_at}}
+        {{post.user.username}} on
+        {{post.created_at}}
         |
-        <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+        <a href="/post/{{id}}">{{post.comments.length}} comment(s)</a>
       </div>
     </article>
   </li>

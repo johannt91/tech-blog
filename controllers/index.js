@@ -7,8 +7,8 @@ router.use('/api', apiRoutes);
 router.use('/', homeRoutes);
 
 
-router.use((req, res) => {
-    res.status(404).end();
-});
+// router.use((req, res) => {
+//     res.status(404).end();
+// });
 
 module.exports = router;
