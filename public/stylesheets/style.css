@@ -110,11 +110,15 @@ main {
     flex: 1;
     padding: 2% 4%;
     margin: auto;
+
 }
 
 main form {
-    font-size: 2vw;
-    width: 50%;
+    font-size: 1.8vw;
+}
+
+.btn-submit-form {
+    margin-top: 20px;
 }
 
 .btn-no-style {
