@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "jest",
+    "seeds": "node seeds/index.js",
     "start": "node server.js"
   },
   "repository": {
