@@ -5,7 +5,8 @@
   ## Description
 
   A tech blog where users can post and comment about the latest tech!
-
+  
+  Link: https://johanntechblog.herokuapp.com/
   ## Table of Contents
 
   * [Installation](#installation)
@@ -44,3 +45,4 @@
 
   You can find more of my work and projects at [johannt91](https://github.com/johannt91).
 
+![](screenshot.png)
