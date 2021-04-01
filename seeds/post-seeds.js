@@ -5,7 +5,7 @@ const postdata = [
     title: 'Donec posuere metus vitae ipsum.',
     body_text: 'https://buzzfeed.com/in/imperdiet/et/commodo/vulputate.png',
     user_id: 1
-  },
+  }
 
 ];
 

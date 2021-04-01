@@ -1,7 +1,15 @@
-<ol class="post-list">
-    {{#each posts as |post|}}
-  <li>
-    {{> post-info post}}
-  </li>
-  {{/each}}
-</ol>
+<section class="home-posts">
+  <div>
+    <ol class="post-list">
+      {{#each posts as |post|}}
+      <li>
+        {{> post-info post}}
+      </li>
+      {{/each}}
+    </ol>
+  </div>
+
+
+  <a href="/dashboard" class="btn btn-dark btn-lg post-btn">Create Post</a>
+
+</section>
