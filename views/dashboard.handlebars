@@ -1,30 +1,29 @@
-<section>
+<section class="post-section">
   <h2>Create New Post</h2>
 
-  <form class="new-post-form">
-    <div>
+  <form id="new-post-form" class="post-form">
       <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
-    </div>
-    <div>
+      <input type="text" id="post-title" name="post-title" placeholder="Title of post"/>
+  
       <label for="body_text">Content</label>
-      <input id="body_text" name="body_text" />
+      <input id="body_text" name="body_text" placeholder="Content...." class="body-text"/>
+    <div>
+      <button type="submit">Create</button>
     </div>
-    <button type="submit">Create</button>
   </form>
 </section>
 
 {{#if posts.length}}
-<section>
+<section class="new-post-section">
   <h2>Your Posts</h2>
-  <ol>
+  <ul>
     {{#each posts as |post|}}
-    <li>
+    <li  class="user-posts">
       {{> post-info post}}
       <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>
     {{/each}}
-  </ol>
+  </ul>
 </section>
 {{/if}}
 

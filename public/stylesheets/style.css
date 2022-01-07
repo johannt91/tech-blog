@@ -1,205 +1,280 @@
 * {
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bright-green-color: #59e72e;
+  --dark-green-color: #34a73e;
 }
 
 body,
 html {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: sans-serif;
-    color: #333;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+::marker {
+  font-size: 2rem;
+}
+
+.body-text::placeholder {
+    position: absolute;
+    top: 2px;
 }
 
 a {
-    text-decoration: none;
-    color: #59e72e;
-    font-weight: bold;
-    font-size: 2;
-    transition: color .1s;
+  text-decoration: none;
+  color: var(--bright-green-color);
+  font-weight: bold;
+  font-size: 2;
+  transition: color 0.1s;
 }
 
 a:hover {
-    color: #34a73e;
+  color: var(--dark-green-color); /*dark green*/
+  text-decoration: none;
 }
 
 button {
-    background-color: #59e72e;
-    border: 0;
-    padding: 1%;
-    color: white;
-    font-weight: bold;
-    transition: background-color .1s;
-    cursor: pointer;
-    border-radius: 5px;
+  background-color: var(--bright-green-color);
+  border: 0;
+  padding: 1%;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.1s;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 button:hover {
-    background-color: #34a73e;
+  background-color: #34a73e;
 }
 
 .post-list {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 textarea,
 input {
-    padding: .5%;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    resize: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none;
 }
 
 textarea:focus,
 input:focus {
-    outline: none;
-    border: 1px solid #3486eb;
+  outline: none;
+  border: 1px solid #3486eb;
 }
 
 textarea {
-    min-width: 40%;
-    min-height: 100px;
+  min-width: 40%;
+  min-height: 100px;
 }
 
+.body-text {
+  height: 8rem;
+}
 
-form>div {
-    margin-bottom: 2%;
+form > div {
+  margin-bottom: 2%;
 }
 
 form label {
-    display: block;
+  display: block;
 }
 
 .wrapper {
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    padding: 30px 1% 30px 3%;
-    background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 1% 30px 3%;
+  background-color: #333;
 }
 
-header h1 a {
-    font-size: 3vw;
-    background-color: #59e72e;
-    color: #333;
-    padding: 15px 13px;
-    border-radius: 15px;
-    box-shadow: 7px 6px #197d0f;
+.logo {
+  font-size: 3vw;
+  background-color: var(--bright-green-color);
+  color: #333;
+  padding: 15px 13px;
+  border-radius: 15px;
+  box-shadow: 7px 6px #197d0f;
 }
 
 .nav {
-   width: 30%;
-   display: flex; 
-   justify-content: space-between;
-   margin-bottom: 45px;
-   font-size: 1.8vw;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 45px;
+  font-size: 1.8vw;
 }
 
 .nav a {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 main {
-    flex: 1;
-    padding: 2% 4%;
-    margin: auto;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2% 4%;
+  margin: auto;
 }
 
+.home-posts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 main form {
-    font-size: 1.8vw;
+  font-size: 1.8vw;
 }
 
 .btn-submit-form {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .btn-no-style {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    text-decoration: none;
-    color: #225ca3;
-    font-size: 100%;
-    font-weight: bold;
-    transition: color .1s;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: #225ca3;
+  font-size: 100%;
+  font-weight: bold;
+  transition: color 0.1s;
 }
 
 .btn-no-style:hover {
-    background: none;
-    color: #3486eb;
+  background: none;
+  color: #3486eb;
+}
+
+.create-post-btn {
+    width: 20%;
+    margin: auto;
 }
 
 .delete-post-btn {
-    background-color: #d41414;
+  background-color: #d41414;
 }
 
 .delete-post-btn:hover {
-    background-color: #ff643d;
+  background-color: #ff643d;
 }
 
 .post {
-    margin-bottom: 2%;
-    line-height: 150%;
+  margin-bottom: 2%;
+  line-height: 150%;
+}
+
+.post-content {
+    text-align: left;
 }
 
 .post .title span {
-    font-style: italic;
-    font-size: 90%;
-    color: #7d7d7d;
+  font-size: 1.8rem;
+  color: #7d7d7d;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0 2rem;
+}
+
+li {
+  list-style: none;
 }
 
 .edit-link {
-    display: block;
-    margin: -1.5% 0 2% 0;
+  display: block;
+  margin: -1.5% 0 2% 0;
 }
 
-.post-btn {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 100px;
-    width: 40%;
-}
+
 
 .comment-form {
-    margin-bottom: 5%;
+  margin-bottom: 5%;
 }
 
 .comment {
-    padding: 1%;
-    margin-bottom: 1%;
+  padding: 1%;
+  margin-bottom: 1%;
 }
 
 .comment:nth-child(odd) {
-    background-color: #fff5eb;
+  background-color: #fff5eb;
 }
 
 .comment .meta {
-    font-size: 90%;
-    margin-bottom: .5%;
-    opacity: .6;
+  font-size: 90%;
+  margin-bottom: 0.5%;
+  opacity: 0.6;
 }
 
-.new-post-form input {
-    width: 300px;
+.post-section {
+  margin: 4rem;
+  width: 80%;
+  text-align: center;
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.post-form input {
+  width: 100%;
+  margin-bottom: 3rem;
 }
 
 .edit-post-form {
-    margin-bottom: 5%;
+  margin-bottom: 5%;
+}
+
+
+
+.edit-form-btns {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.edit-form-btns button {
+    padding: 0 1.5rem;
+    font-size: 2rem;
+}
+
+.user-posts {
+  border: 1px solid var(--bright-green-color);
+  margin-bottom: 2rem;
 }
 
 footer {
-    border-top: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-    padding: 1%;
-    font-size: 110%;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  font-size: 110%;
 }
