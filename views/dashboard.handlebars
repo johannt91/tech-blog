@@ -6,15 +6,15 @@
       <input type="text" id="post-title" name="post-title" placeholder="Title of post"/>
   
       <label for="body_text">Content</label>
-      <input id="body_text" name="body_text" placeholder="Content...." class="body-text"/>
-    <div>
+      <textarea id="body_text" name="body_text" placeholder="Content...."></textarea>
+    <div class="form-btns">
       <button type="submit">Create</button>
     </div>
   </form>
 </section>
 
 {{#if posts.length}}
-<section class="new-post-section">
+<section class="post-section">
   <h2>Your Posts</h2>
   <ul>
     {{#each posts as |post|}}

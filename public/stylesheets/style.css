@@ -7,6 +7,7 @@
 :root {
   --bright-green-color: #59e72e;
   --dark-green-color: #34a73e;
+  --dark-grey-color: #333;
 }
 
 body,
@@ -26,8 +27,8 @@ h2 {
 }
 
 .body-text::placeholder {
-    position: absolute;
-    top: 2px;
+  position: absolute;
+  top: 2px;
 }
 
 a {
@@ -79,7 +80,7 @@ input:focus {
 
 textarea {
   min-width: 40%;
-  min-height: 100px;
+  min-height: 200px;
 }
 
 .body-text {
@@ -105,13 +106,13 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 30px 1% 30px 3%;
-  background-color: #333;
+  background-color: var(--dark-grey-color);
 }
 
 .logo {
   font-size: 3vw;
   background-color: var(--bright-green-color);
-  color: #333;
+  color: var(--dark-grey-color);
   padding: 15px 13px;
   border-radius: 15px;
   box-shadow: 7px 6px #197d0f;
@@ -140,9 +141,9 @@ main {
 }
 
 .home-posts {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 main form {
   font-size: 1.8vw;
@@ -170,8 +171,8 @@ main form {
 }
 
 .create-post-btn {
-    width: 20%;
-    margin: auto;
+  width: 20%;
+  margin: auto;
 }
 
 .delete-post-btn {
@@ -188,7 +189,7 @@ main form {
 }
 
 .post-content {
-    text-align: left;
+  text-align: left;
 }
 
 .post .title span {
@@ -197,9 +198,9 @@ main form {
 }
 
 .title {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0 2rem;
 }
 
 li {
@@ -210,8 +211,6 @@ li {
   display: block;
   margin: -1.5% 0 2% 0;
 }
-
-
 
 .comment-form {
   margin-bottom: 5%;
@@ -253,17 +252,16 @@ li {
   margin-bottom: 5%;
 }
 
-
-
-.edit-form-btns {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+.form-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
 }
 
-.edit-form-btns button {
-    padding: 0 1.5rem;
-    font-size: 2rem;
+.form-btns button {
+  padding: 0 1.5rem;
+  font-size: 2rem;
 }
 
 .user-posts {
@@ -273,8 +271,24 @@ li {
 
 footer {
   border-top: 1px solid #ccc;
+  background-color: var(--dark-grey-color);
+  color: #fff;
   display: flex;
   justify-content: center;
   padding: 1%;
   font-size: 110%;
+}
+
+@media only screen and (max-width: 980px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+  label {
+    font-size: 1rem;
+  }
+
+  input {
+    font-size: 1rem;
+    line-height: normal;
+  }
 }
