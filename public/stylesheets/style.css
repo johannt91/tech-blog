@@ -31,15 +31,15 @@ h2 {
 }
 
 a {
-  text-decoration: none;
-  color: var(--bright-green-color);
-  font-weight: bold;
-  font-size: 2;
-  transition: color 0.1s;
+  text-decoration: none!important;
+  color: var(--bright-green-color)!important;
+  font-weight: bold!important;
+  font-size: 1.2rem!important;
+  transition: color 0.1s!important;
 }
 
 a:hover {
-  color: var(--dark-green-color); /*dark green*/
+  color: var(--dark-green-color)!important; /*dark green*/
   text-decoration: none;
 }
 
@@ -102,17 +102,13 @@ form label {
 }
 
 header {
-  display: flex;
-  width: 100%;
-  padding: 2rem 1rem 0;
-  justify-content: space-between;
-  background-color: var(--dark-grey-color);
+  background-color: var(--dark-grey-color)!important;
 }
 
 .logo {
   font-size: 3vw;
-  background-color: var(--bright-green-color);
-  color: var(--dark-grey-color);
+  background-color: var(--bright-green-color)!important;
+  color: var(--dark-grey-color)!important;
   padding: 15px 13px;
   border-radius: 15px;
   box-shadow: 7px 6px #197d0f;
@@ -125,6 +121,15 @@ header {
   gap: 1.5rem;
   margin-bottom: 45px;
   font-size: 2rem;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navbar-nav {
+    display: flex!important;
+    justify-content: end!important;
 }
 
 .nav a {
@@ -325,3 +330,4 @@ footer {
     flex-direction: column;
   }
 }
+
