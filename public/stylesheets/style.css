@@ -130,6 +130,15 @@ header {
 .navbar-nav {
     display: flex!important;
     justify-content: end!important;
+    align-items: center!important;
+}
+
+.navbar-toggler-icon {
+
+}
+
+.navbar-toggler {
+    background-color: var(--bright-green-color);
 }
 
 .nav a {
@@ -162,22 +171,16 @@ main form {
 .btn-no-style {
   background: none;
   border: none;
-  padding: 0;
+  padding: 0 0 0 .2rem;
   cursor: pointer;
   text-decoration: none;
-  color: #225ca3;
-  font-size: 100%;
+  font-size: 1.2rem;
   font-weight: bold;
-  transition: color 0.1s;
 }
 
-.btn-no-style:hover {
-  background: none;
-  color: #3486eb;
-}
 
 .create-post-btn {
-  width: 20%;
+  width: 200px;
   margin: auto;
 }
 
@@ -292,12 +295,12 @@ footer {
   label {
     font-size: 1rem;
   }
-  nav a {
+  nav a, .meta {
     font-size: 1rem;
   }
 
   .btn-no-style {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   input {
@@ -315,19 +318,27 @@ footer {
     font-size: 1.4rem;
   }
 
-  .meta {
-    font-size: 0.8rem;
-  }
+  .meta, .meta a {
+    font-size: 0.8rem!important;
+}
 
   .post-content {
     font-size: 1rem;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 575px) {
   .title {
     display: flex;
     flex-direction: column;
+  }
+
+  .navbar-nav {
+    padding-top: 1.5rem;
+  }
+
+  .navbar-nav a {
+      padding-bottom: 1.5rem;
   }
 }
 
