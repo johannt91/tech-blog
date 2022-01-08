@@ -23,6 +23,8 @@
 
   ### Installation
   
+  Clone this repository and then run:
+  
   ```
   npm i
   ```
