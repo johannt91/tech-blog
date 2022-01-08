@@ -133,10 +133,6 @@ header {
     align-items: center!important;
 }
 
-.navbar-toggler-icon {
-
-}
-
 .navbar-toggler {
     background-color: var(--bright-green-color);
 }
