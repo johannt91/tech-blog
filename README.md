@@ -4,17 +4,22 @@
 
   ## Description
 
-  A tech blog where users can post and comment about the latest tech!
+  A CMS style blog site with CRUD functionality. Users may also comment on the posts of other users.
   
   Link: https://johanntechblog.herokuapp.com/
   ## Table of Contents
 
+  * [Technologies](#Technologies)
   * [Installation](#installation)
   * [Usage](#usage)
   * [License](#license)
   * [Contributing](#contributing)
   * [Test](#test)
   * [Questions](#questions)
+
+  ### Technologies
+
+  HTML5, JavaScript, CSS, Bootstrap, MySQL, Sequelize, Handlebars.js, Express.js, jest, Bcrypt
 
   ### Installation
   
@@ -43,6 +48,6 @@
   
   If you have any questions about the repo, please contact me at j.taylor1343@gmail.com.
 
-  You can find more of my work and projects at [johannt91](https://github.com/johannt91).
+  You can find more of my work and projects at [johannt91](https://github.com/johannt91) or check out my personal [website](https://johanntaylor.com)!
 
-![](screenshot.png)
+![](techblog.jpg)
