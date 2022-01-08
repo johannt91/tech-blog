@@ -94,6 +94,17 @@ form label {
   display: block;
 }
 
+.login-form, .signup-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.btn-submit-form {
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
+
 .wrapper {
   width: 100%;
   min-height: 100%;
@@ -158,10 +169,6 @@ main {
 }
 main form {
   font-size: 1.8vw;
-}
-
-.btn-submit-form {
-  margin-top: 20px;
 }
 
 .btn-no-style {
